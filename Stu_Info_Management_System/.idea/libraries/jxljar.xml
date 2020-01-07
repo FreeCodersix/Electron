@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jxljar">
+    <CLASSES>
+      <root url="file://E:/jar包/jxljar" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+    <jarDirectory url="file://E:/jar包/jxljar" recursive="false" />
+  </library>
+</component>

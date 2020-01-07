@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="commons-beanutils-1.8.0">
+    <CLASSES>
+      <root url="jar://E:/jar包/commons-beanutils-1.8.0.jar!/" />
+      <root url="jar://E:/jar包/commons-beanutils-1.8.3.jar!/" />
+      <root url="jar://E:/jar包/commons-collections-3.2.1.jar!/" />
+      <root url="jar://E:/jar包/commons-dbutils-1.6.jar!/" />
+      <root url="jar://E:/jar包/commons-fileupload-1.2.1.jar!/" />
+      <root url="jar://E:/jar包/commons-io-1.4.jar!/" />
+      <root url="jar://E:/jar包/commons-lang-2.5.jar!/" />
+      <root url="jar://E:/jar包/commons-logging-1.1.1.jar!/" />
+      <root url="jar://E:/jar包/commons-logging.jar!/" />
+      <root url="jar://E:/jar包/ezmorph-1.0.6.jar!/" />
+      <root url="jar://E:/jar包/FilelLoad.jar!/" />
+      <root url="jar://E:/jar包/json-lib-2.3-jdk15.jar!/" />
+      <root url="jar://E:/jar包/jsonplugin-0.34.jar!/" />
+      <root url="jar://E:/jar包/jstl.jar!/" />
+      <root url="jar://E:/jar包/mysql-connector-java-5.1.7-bin.jar!/" />
+      <root url="jar://E:/jar包/poi-3.9.jar!/" />
+      <root url="jar://E:/jar包/standard.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

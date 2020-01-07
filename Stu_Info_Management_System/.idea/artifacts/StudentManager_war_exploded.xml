@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="StudentManager:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/StudentManager_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Stu_Info_Management_System/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Stu_Info_Management_System" />
+          <element id="library" level="project" name="apache-tomcat-8.5" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jxljar" />
+          <element id="library" level="project" name="net.sf" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
