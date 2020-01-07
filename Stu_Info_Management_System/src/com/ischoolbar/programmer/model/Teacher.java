@@ -3,13 +3,13 @@ package com.ischoolbar.programmer.model;
 import java.io.InputStream;
 
 /**
- * 
+ *
  * @author llq
- *½ÌÊ¦ÊµÌå±íÉè¼Æ
+ * æ•™å¸ˆå®ä½“è¡¨è®¾è®¡
  */
 public class Teacher {
 	private int id;
-	private String sn;//½ÌÊ¦¹¤ºÅ
+	private String sn;//æ•™å¸ˆå·¥å·
 	private String name;
 	private String password;
 	private int clazzId;
@@ -29,7 +29,7 @@ public class Teacher {
 	public void setSn(String sn) {
 		this.sn = sn;
 	}
-	
+
 	public int getClazzId() {
 		return clazzId;
 	}
@@ -72,5 +72,5 @@ public class Teacher {
 	public void setPhoto(InputStream photo) {
 		this.photo = photo;
 	}
-	
+
 }

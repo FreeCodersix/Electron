@@ -16,17 +16,17 @@ import com.ischoolbar.programmer.model.Teacher;
 import com.ischoolbar.programmer.util.StringUtil;
 
 /**
- * 
+ *
  * @author llq
- *登录验证servlet
+ *鐧诲綍楠岃瘉servlet
  */
 public class LoginServlet extends HttpServlet {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -5870852067427524781L;
-	
+
 	public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		doPost(request, response);
 	}
@@ -49,7 +49,7 @@ public class LoginServlet extends HttpServlet {
 			response.getWriter().write("vcodeError");
 			return;
 		}
-		//验证码验证通过，对比用户名密码是否正确
+		//楠岃瘉鐮侀獙璇侀�氳繃锛屽姣旂敤鎴峰悕瀵嗙爜鏄惁姝ｇ‘
 		String loginStatus = "loginFaild";
 		switch (type) {
 			case 1:{
@@ -96,11 +96,11 @@ public class LoginServlet extends HttpServlet {
 			}
 			default:
 				break;
-			}
+		}
 		response.getWriter().write(loginStatus);
-		
+
 	}
-	
+
 	private void logout(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		request.getSession().removeAttribute("user");
 		request.getSession().removeAttribute("userType");

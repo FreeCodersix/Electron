@@ -10,9 +10,9 @@ import com.ischoolbar.programmer.model.Page;
 import com.ischoolbar.programmer.model.SelectedCourse;
 
 /**
- * 
+ *
  * @author llq
- *Ñ¡¿Î±íÊı¾İ¿â²Ù×÷·â×°
+ *é€‰è¯¾è¡¨æ•°æ®åº“æ“ä½œå°è£…
  */
 public class SelectedCourseDao extends BaseDao {
 	public List<SelectedCourse> getSelectedCourseList(SelectedCourse selectedCourse,Page page){
@@ -62,7 +62,7 @@ public class SelectedCourseDao extends BaseDao {
 		return total;
 	}
 	/**
-	 * ¼ì²éÑ§ÉúÊÇ·ñÒÑ¾­Ñ¡Ôñ¸ÃÃÅ¿Î³Ì
+	 * æ£€æŸ¥å­¦ç”Ÿæ˜¯å¦å·²ç»é€‰æ‹©è¯¥é—¨è¯¾ç¨‹
 	 * @param studentId
 	 * @param courseId
 	 * @return
@@ -82,7 +82,7 @@ public class SelectedCourseDao extends BaseDao {
 		return ret;
 	}
 	/**
-	 * Ìí¼ÓÑ¡¿ÎĞÅÏ¢
+	 * æ·»åŠ é€‰è¯¾ä¿¡æ¯
 	 * @param selectedCourse
 	 * @return
 	 */
@@ -91,7 +91,7 @@ public class SelectedCourseDao extends BaseDao {
 		return update(sql);
 	}
 	/**
-	 * É¾³ıËùÑ¡¿Î³Ì
+	 * åˆ é™¤æ‰€é€‰è¯¾ç¨‹
 	 * @param id
 	 * @return
 	 */
@@ -100,7 +100,7 @@ public class SelectedCourseDao extends BaseDao {
 		return update(sql);
 	}
 	/**
-	 * »ñÈ¡Ò»ÌõÑ¡¿ÎÊı¾İ
+	 * è·å–ä¸€æ¡é€‰è¯¾æ•°æ®
 	 * @param id
 	 * @return
 	 */

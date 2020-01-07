@@ -10,9 +10,9 @@ import com.ischoolbar.programmer.model.Page;
 import com.ischoolbar.programmer.util.StringUtil;
 
 /**
- * 
+ *
  * @author llq
- *°à¼¶ĞÅÏ¢Êı¾İ¿â²Ù×÷
+ *ç­çº§ä¿¡æ¯æ•°æ®åº“æ“ä½œ
  */
 public class ClazzDao extends BaseDao {
 	public List<Clazz> getClazzList(Clazz clazz,Page page){
@@ -67,5 +67,5 @@ public class ClazzDao extends BaseDao {
 		String sql = "update s_clazz set name = '"+clazz.getName()+"',info = '"+clazz.getInfo()+"' where id = " + clazz.getId();
 		return update(sql);
 	}
-	
+
 }

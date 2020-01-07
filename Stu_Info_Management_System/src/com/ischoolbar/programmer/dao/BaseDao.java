@@ -10,36 +10,36 @@ import java.util.List;
 import com.ischoolbar.programmer.util.DbUtil;
 
 /**
- * 
+ *
  * @author llq
- *»ù´¡dao£¬·â×°»ù±¾²Ù×÷
+ *åŸºç¡€daoï¼Œå°è£…åŸºæœ¬æ“ä½œ
  */
 public class BaseDao {
 	private DbUtil dbUtil = new DbUtil();
-	
+
 	/**
-	 * ¹Ø±ÕÊı¾İ¿âÁ¬½Ó£¬ÊÍ·Å×ÊÔ´
+	 * å…³é—­æ•°æ®åº“è¿æ¥ï¼Œé‡Šæ”¾èµ„æº
 	 */
 	public void closeCon(){
 		dbUtil.closeCon();
 	}
-	
+
 	/**
-	 * »ù´¡²éÑ¯,¶àÌõ²éÑ¯
+	 * åŸºç¡€æŸ¥è¯¢,å¤šæ¡æŸ¥è¯¢
 	 */
 	public ResultSet query(String sql){
 		try {
 			PreparedStatement prepareStatement = dbUtil.getConnection().prepareStatement(sql);
 			return prepareStatement.executeQuery();
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
-	} 
+	}
 	/**
-	 *¸Ä±äÊı¾İ¿âÄÚÈİ²Ù×÷
+	 *æ”¹å˜æ•°æ®åº“å†…å®¹æ“ä½œ
 	 */
 	public boolean update(String sql){
 		try {

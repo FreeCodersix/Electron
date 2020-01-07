@@ -21,10 +21,10 @@ import com.ischoolbar.programmer.model.Page;
 public class CourseServlet extends HttpServlet {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -1991371597134855732L;
-	
+
 	public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		doPost(request, response);
 	}
@@ -48,7 +48,7 @@ public class CourseServlet extends HttpServlet {
 		}
 	}
 	private void deleteCourse(HttpServletRequest request,
-			HttpServletResponse response) {
+							  HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		String[] ids = request.getParameterValues("ids[]");
 		String idStr = "";
@@ -69,7 +69,7 @@ public class CourseServlet extends HttpServlet {
 		}
 	}
 	private void editCourse(HttpServletRequest request,
-			HttpServletResponse response) {
+							HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		String name = request.getParameter("name");
 		int teacherId = Integer.parseInt(request.getParameter("teacherid").toString());
@@ -99,7 +99,7 @@ public class CourseServlet extends HttpServlet {
 		}
 	}
 	private void getCourseList(HttpServletRequest request,
-			HttpServletResponse response) {
+							   HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		String name = request.getParameter("name");
 		int teacherId = request.getParameter("teacherid") == null ? 0 : Integer.parseInt(request.getParameter("teacherid").toString());
@@ -129,7 +129,7 @@ public class CourseServlet extends HttpServlet {
 		}
 	}
 	private void addCourse(HttpServletRequest request,
-			HttpServletResponse response) {
+						   HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		String name = request.getParameter("name");
 		int teacherId = Integer.parseInt(request.getParameter("teacherid").toString());
@@ -156,5 +156,5 @@ public class CourseServlet extends HttpServlet {
 			courseDao.closeCon();
 		}
 	}
-	
+
 }

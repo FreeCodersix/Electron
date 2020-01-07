@@ -1,6 +1,6 @@
 package com.ischoolbar.programmer.model;
 /**
- * ³É¼¨ÊµÌå±í
+ * æˆç»©å®ä½“è¡¨
  * @author llq
  *
  */
@@ -40,5 +40,5 @@ public class Score {
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
-	
+
 }

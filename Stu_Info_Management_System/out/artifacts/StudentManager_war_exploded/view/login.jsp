@@ -117,7 +117,7 @@
     </form>
   </div>
 </div>
-<div class="footer">Copyright &nbsp; artisan @ 鲁博文 </div>
+<div class="footer">Copyright &nbsp; Steven @ 鲁博文 </div>
 
 
 </body>

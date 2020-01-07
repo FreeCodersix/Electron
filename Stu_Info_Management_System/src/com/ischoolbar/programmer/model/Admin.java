@@ -1,8 +1,8 @@
 package com.ischoolbar.programmer.model;
 /**
- * 
+ *
  * @author llq
- *管理员实体类
+ *绠＄悊鍛樺疄浣撶被
  */
 public class Admin {
 	private int id;
@@ -33,5 +33,5 @@ public class Admin {
 	public void setStatus(int status) {
 		this.status = status;
 	}
-	
+
 }

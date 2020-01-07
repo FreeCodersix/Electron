@@ -2,7 +2,7 @@ package com.ischoolbar.programmer.model;
 /**
  * 
  * @author llq
- *班级实体表
+ *
  */
 public class Clazz {
 	private int id;

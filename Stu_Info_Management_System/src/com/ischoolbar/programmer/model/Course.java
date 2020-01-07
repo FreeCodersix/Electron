@@ -2,15 +2,15 @@ package com.ischoolbar.programmer.model;
 /**
  * 
  * @author llq
- *¿Î³ÌÊµÌå±í
+ * è¯¾ç¨‹å®žä½“è¡¨
  */
 public class Course {
 	private int id;
 	private String name;
 	private int teacherId;
 	private String courseDate;
-	private int selectedNum = 0;//ÒÑÑ¡ÈËÊý
-	private int maxNum = 50;//¿Î³Ì×î´óÑ¡¿ÎÈËÊý
+	private int selectedNum = 0;//ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½
+	private int maxNum = 50;//ï¿½Î³ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	private String info;
 	public int getId() {
 		return id;

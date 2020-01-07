@@ -13,9 +13,9 @@ import com.ischoolbar.programmer.model.Teacher;
 import com.ischoolbar.programmer.util.StringUtil;
 
 /**
- * 
+ *
  * @author llq
- *教师表数据库操作
+ *鏁欏笀琛ㄦ暟鎹簱鎿嶄綔
  */
 public class TeacherDao extends BaseDao {
 	public boolean addTeacher(Teacher teacher){

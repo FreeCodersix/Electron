@@ -24,11 +24,11 @@ import com.ischoolbar.programmer.model.Student;
 public class LeaveServlet extends HttpServlet {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	
-	
+
+
 	public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		doPost(request, response);
 	}
@@ -55,7 +55,7 @@ public class LeaveServlet extends HttpServlet {
 		}
 	}
 	private void deleteLeave(HttpServletRequest request,
-			HttpServletResponse response) {
+							 HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		int id = Integer.parseInt(request.getParameter("id"));
 		LeaveDao leaveDao = new LeaveDao();
@@ -71,7 +71,7 @@ public class LeaveServlet extends HttpServlet {
 		}
 	}
 	private void checkLeave(HttpServletRequest request,
-			HttpServletResponse response) {
+							HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		int studentId = Integer.parseInt(request.getParameter("studentid"));
 		int id = Integer.parseInt(request.getParameter("id"));
@@ -99,7 +99,7 @@ public class LeaveServlet extends HttpServlet {
 		}
 	}
 	private void editLeave(HttpServletRequest request,
-			HttpServletResponse response) {
+						   HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		int studentId = Integer.parseInt(request.getParameter("studentid"));
 		int id = Integer.parseInt(request.getParameter("id"));
@@ -125,16 +125,16 @@ public class LeaveServlet extends HttpServlet {
 		}
 	}
 	private void getLeaveList(HttpServletRequest request,
-			HttpServletResponse response) {
+							  HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		int studentId = request.getParameter("studentid") == null ? 0 : Integer.parseInt(request.getParameter("studentid").toString());
 		Integer currentPage = request.getParameter("page") == null ? 1 : Integer.parseInt(request.getParameter("page"));
 		Integer pageSize = request.getParameter("rows") == null ? 999 : Integer.parseInt(request.getParameter("rows"));
 		Leave leave = new Leave();
-		//»ñÈ¡µ±Ç°µÇÂ¼ÓÃ»§ÀàĞÍ
+		//è·å–å½“å‰ç™»å½•ç”¨æˆ·ç±»å‹
 		int userType = Integer.parseInt(request.getSession().getAttribute("userType").toString());
 		if(userType == 2){
-			//Èç¹ûÊÇÑ§Éú£¬Ö»ÄÜ²é¿´×Ô¼ºµÄĞÅÏ¢
+			//å¦‚æœæ˜¯å­¦ç”Ÿï¼Œåªèƒ½æŸ¥çœ‹è‡ªå·±çš„ä¿¡æ¯
 			Student currentUser = (Student)request.getSession().getAttribute("user");
 			studentId = currentUser.getId();
 		}
@@ -160,7 +160,7 @@ public class LeaveServlet extends HttpServlet {
 		}
 	}
 	private void addLeave(HttpServletRequest request,
-			HttpServletResponse response) {
+						  HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		int studentId = Integer.parseInt(request.getParameter("studentid"));
 		String info = request.getParameter("info");

@@ -10,14 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.ischoolbar.programmer.util.CpachaUtil;
 /**
- * 
+ *
  * @author llq
  * 验证码servlet
  */
 public class CpachaServlet extends HttpServlet {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 4919529414762301338L;
 	public void doGet(HttpServletRequest request,HttpServletResponse reponse) throws IOException{

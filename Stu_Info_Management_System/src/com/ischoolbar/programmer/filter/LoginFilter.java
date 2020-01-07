@@ -11,9 +11,9 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 /**
- * 
+ *
  * @author llq
- *À¹½ØÓÃ»§Î´µÇÂ¼×´Ì¬ÏÂµÄ²Ù×÷
+ *æ‹¦æˆªç”¨æˆ·æœªç™»å½•çŠ¶æ€ä¸‹çš„æ“ä½œ
  */
 public class LoginFilter implements Filter {
 
@@ -25,13 +25,13 @@ public class LoginFilter implements Filter {
 
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse rep,
-			FilterChain chain) throws IOException, ServletException {
+						 FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		HttpServletRequest request = (HttpServletRequest)req;
 		HttpServletResponse response = (HttpServletResponse)rep;
 		Object user = request.getSession().getAttribute("user");
 		if(user == null){
-			//Î´µÇÂ¼
+			//æœªç™»å½•
 			response.sendRedirect("index.jsp");
 			return;
 		}else{

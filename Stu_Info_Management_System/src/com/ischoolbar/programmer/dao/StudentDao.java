@@ -132,7 +132,7 @@ public class StudentDao extends BaseDao {
 		}
 		return total;
 	}
-	
+
 	public Student login(String name ,String password){
 		String sql = "select * from s_student where name = '" + name + "' and password = '" + password + "'";
 		ResultSet resultSet = query(sql);

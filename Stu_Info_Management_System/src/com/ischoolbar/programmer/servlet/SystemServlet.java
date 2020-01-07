@@ -14,17 +14,17 @@ import com.ischoolbar.programmer.model.Admin;
 import com.ischoolbar.programmer.model.Student;
 import com.ischoolbar.programmer.model.Teacher;
 /**
- * 
+ *
  * @author llq
- *ÏµÍ³µÇÂ¼ºóÖ÷½çÃæ
+ *ç³»ç»Ÿç™»å½•åä¸»ç•Œé¢
  */
 public class SystemServlet extends HttpServlet {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -7258264317769166483L;
-	
+
 	public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		doPost(request, response);
 	}
@@ -45,18 +45,18 @@ public class SystemServlet extends HttpServlet {
 		}
 	}
 	private void editPassword(HttpServletRequest request,
-			HttpServletResponse response) {
+							  HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		String password = request.getParameter("password");
 		String newPassword = request.getParameter("newpassword");
 		response.setCharacterEncoding("UTF-8");
 		int userType = Integer.parseInt(request.getSession().getAttribute("userType").toString());
 		if(userType == 1){
-			//¹ÜÀíÔ±
+			//ç®¡ç†å‘˜
 			Admin admin = (Admin)request.getSession().getAttribute("user");
 			if(!admin.getPassword().equals(password)){
 				try {
-					response.getWriter().write("Ô­ÃÜÂë´íÎó£¡");
+					response.getWriter().write("åŸå¯†ç é”™è¯¯ï¼");
 					return;
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -76,7 +76,7 @@ public class SystemServlet extends HttpServlet {
 				}
 			}else{
 				try {
-					response.getWriter().write("Êı¾İ¿âĞŞ¸Ä´íÎó");
+					response.getWriter().write("æ•°æ®åº“ä¿®æ”¹é”™è¯¯");
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -86,11 +86,11 @@ public class SystemServlet extends HttpServlet {
 			}
 		}
 		if(userType == 2){
-			//Ñ§Éú
+			//å­¦ç”Ÿ
 			Student student = (Student)request.getSession().getAttribute("user");
 			if(!student.getPassword().equals(password)){
 				try {
-					response.getWriter().write("Ô­ÃÜÂë´íÎó£¡");
+					response.getWriter().write("åŸå¯†ç é”™è¯¯ï¼");
 					return;
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -110,7 +110,7 @@ public class SystemServlet extends HttpServlet {
 				}
 			}else{
 				try {
-					response.getWriter().write("Êı¾İ¿âĞŞ¸Ä´íÎó");
+					response.getWriter().write("æ•°æ®åº“ä¿®æ”¹é”™è¯¯");
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -120,11 +120,11 @@ public class SystemServlet extends HttpServlet {
 			}
 		}
 		if(userType == 3){
-			//½ÌÊ¦
+			//æ•™å¸ˆ
 			Teacher teacher = (Teacher)request.getSession().getAttribute("user");
 			if(!teacher.getPassword().equals(password)){
 				try {
-					response.getWriter().write("Ô­ÃÜÂë´íÎó£¡");
+					response.getWriter().write("åŸå¯†ç é”™è¯¯ï¼");
 					return;
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -144,7 +144,7 @@ public class SystemServlet extends HttpServlet {
 				}
 			}else{
 				try {
-					response.getWriter().write("Êı¾İ¿âĞŞ¸Ä´íÎó");
+					response.getWriter().write("æ•°æ®åº“ä¿®æ”¹é”™è¯¯");
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -155,7 +155,7 @@ public class SystemServlet extends HttpServlet {
 		}
 	}
 	private void personalView(HttpServletRequest request,
-			HttpServletResponse response) {
+							  HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		try {
 			request.getRequestDispatcher("view/personalView.jsp").forward(request, response);

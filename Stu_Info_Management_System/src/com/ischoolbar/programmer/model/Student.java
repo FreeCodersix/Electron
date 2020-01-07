@@ -3,20 +3,20 @@ package com.ischoolbar.programmer.model;
 import java.io.InputStream;
 
 /**
- * 
+ *
  * @author llq
- *Ñ§ÉúÊµÌåÀà
+ *å­¦ç”Ÿå®ä½“ç±»
  */
 public class Student {
 	private int id;
-	private String sn;//Ñ§ºÅ
+	private String sn;//å­¦å·
 	private String name;
 	private String password;
 	private int clazzId;
-	private String sex = "ÄĞ";
+	private String sex = "ç”·";
 	private String mobile;
 	private String qq;
-	private InputStream photo;//Í·Ïñ
+	private InputStream photo;//å¤´åƒ
 	public int getId() {
 		return id;
 	}
@@ -71,5 +71,5 @@ public class Student {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 }

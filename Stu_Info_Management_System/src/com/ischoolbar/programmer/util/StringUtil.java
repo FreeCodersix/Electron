@@ -1,8 +1,8 @@
 package com.ischoolbar.programmer.util;
 /**
- * 
+ *
  * @author llq
- *StringÀàµÄÒ»Ğ©¹«ÓÃ²Ù×÷·½·¨
+ *Stringç±»çš„ä¸€äº›å…¬ç”¨æ“ä½œæ–¹æ³•
  */
 public class StringUtil {
 	public static boolean isEmpty(String str) {

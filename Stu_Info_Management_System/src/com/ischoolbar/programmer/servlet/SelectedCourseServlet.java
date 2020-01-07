@@ -23,7 +23,7 @@ import com.ischoolbar.programmer.model.Student;
 public class SelectedCourseServlet extends HttpServlet {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 7120913402001186955L;
 
@@ -48,7 +48,7 @@ public class SelectedCourseServlet extends HttpServlet {
 		}
 	}
 	private void deleteSelectedCourse(HttpServletRequest request,
-			HttpServletResponse response) throws IOException {
+									  HttpServletResponse response) throws IOException {
 		// TODO Auto-generated method stub
 		int id = Integer.parseInt(request.getParameter("id"));
 		SelectedCourseDao selectedCourseDao = new SelectedCourseDao();
@@ -71,7 +71,7 @@ public class SelectedCourseServlet extends HttpServlet {
 		response.getWriter().write(msg);
 	}
 	private void addSelectedCourse(HttpServletRequest request,
-			HttpServletResponse response) throws IOException {
+								   HttpServletResponse response) throws IOException {
 		// TODO Auto-generated method stub
 		int studentId = request.getParameter("studentid") == null ? 0 : Integer.parseInt(request.getParameter("studentid").toString());
 		int courseId = request.getParameter("courseid") == null ? 0 : Integer.parseInt(request.getParameter("courseid").toString());
@@ -102,17 +102,17 @@ public class SelectedCourseServlet extends HttpServlet {
 		response.getWriter().write(msg);
 	}
 	private void getSelectedCourseList(HttpServletRequest request,
-			HttpServletResponse response) {
+									   HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		int studentId = request.getParameter("studentid") == null ? 0 : Integer.parseInt(request.getParameter("studentid").toString());
 		int courseId = request.getParameter("courseid") == null ? 0 : Integer.parseInt(request.getParameter("courseid").toString());
 		Integer currentPage = request.getParameter("page") == null ? 1 : Integer.parseInt(request.getParameter("page"));
 		Integer pageSize = request.getParameter("rows") == null ? 999 : Integer.parseInt(request.getParameter("rows"));
 		SelectedCourse selectedCourse = new SelectedCourse();
-		//»ñÈ¡µ±Ç°µÇÂ¼ÓÃ»§ÀàĞÍ
+		//è·å–å½“å‰ç™»å½•ç”¨æˆ·ç±»å‹
 		int userType = Integer.parseInt(request.getSession().getAttribute("userType").toString());
 		if(userType == 2){
-			//Èç¹ûÊÇÑ§Éú£¬Ö»ÄÜ²é¿´×Ô¼ºµÄĞÅÏ¢
+			//å¦‚æœæ˜¯å­¦ç”Ÿï¼Œåªèƒ½æŸ¥çœ‹è‡ªå·±çš„ä¿¡æ¯
 			Student currentUser = (Student)request.getSession().getAttribute("user");
 			studentId = currentUser.getId();
 		}

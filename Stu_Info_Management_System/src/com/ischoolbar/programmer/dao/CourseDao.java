@@ -11,16 +11,16 @@ import com.ischoolbar.programmer.model.Page;
 import com.ischoolbar.programmer.util.StringUtil;
 
 /**
- * 
+ *
  * @author llq
- *¿Î³ÌÊı¾İ¿â²Ù×÷Àà
+ *è¯¾ç¨‹æ•°æ®åº“æ“ä½œç±»
  */
 public class CourseDao extends BaseDao {
 	public boolean addCourse(Course course){
 		String sql = "insert into s_course values(null,'"+course.getName()+"',"+course.getTeacherId()+",'"+course.getCourseDate()+"',0,"+course.getMaxNum()+",'"+course.getInfo()+"') ";
 		return update(sql);
 	}
-	
+
 	public List<Course> getCourseList(Course course,Page page){
 		List<Course> ret = new ArrayList<Course>();
 		String sql = "select * from s_course ";
@@ -50,7 +50,7 @@ public class CourseDao extends BaseDao {
 		}
 		return ret;
 	}
-	
+
 	public int getCourseListTotal(Course course){
 		int total = 0;
 		String sql = "select count(*)as total from s_course ";
@@ -71,7 +71,7 @@ public class CourseDao extends BaseDao {
 		}
 		return total;
 	}
-	
+
 	public boolean editCourse(Course course) {
 		// TODO Auto-generated method stub
 		String sql = "update s_course set name = '"+course.getName()+"',teacher_id = "+course.getTeacherId()+",course_date = '"+course.getCourseDate()+"',max_num = "+course.getMaxNum()+" ,info = '"+course.getInfo()+"' where id = " + course.getId();
@@ -83,7 +83,7 @@ public class CourseDao extends BaseDao {
 		return update(sql);
 	}
 	/**
-	 * ¼ì²é¸Ã¿Î³ÌÊÇ·ñÒÑÑ¡Âú
+	 * æ£€æŸ¥è¯¥è¯¾ç¨‹æ˜¯å¦å·²é€‰æ»¡
 	 * @param courseId
 	 * @return
 	 */
@@ -102,7 +102,7 @@ public class CourseDao extends BaseDao {
 		return ret;
 	}
 	/**
-	 * ¸üĞÂ¿Î³ÌÒÑÑ¡ÈËÊı
+	 * æ›´æ–°è¯¾ç¨‹å·²é€‰äººæ•°
 	 * @param courseId
 	 */
 	public void updateCourseSelectedNum(int courseId ,int num){
@@ -114,9 +114,9 @@ public class CourseDao extends BaseDao {
 		}
 		update(sql);
 	}
-	
+
 	/**
-	 * »ñÈ¡ÖÆ¶¨id·¶Î§ÄÚµÄ¿Î³ÌÁĞ±í
+	 * è·å–åˆ¶å®šidèŒƒå›´å†…çš„è¯¾ç¨‹åˆ—è¡¨
 	 * @param ids
 	 * @return
 	 */
@@ -142,9 +142,9 @@ public class CourseDao extends BaseDao {
 		}
 		return ret;
 	}
-	
+
 	/**
-	 * »ñÈ¡Ö¸¶¨µÄ¿Î³Ì
+	 * è·å–æŒ‡å®šçš„è¯¾ç¨‹
 	 * @param id
 	 * @return
 	 */

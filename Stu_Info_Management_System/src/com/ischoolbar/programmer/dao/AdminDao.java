@@ -7,12 +7,12 @@ import com.ischoolbar.programmer.model.Admin;
 import com.ischoolbar.programmer.model.Clazz;
 
 /**
- * 
+ *
  * @author llq
- *管理员数据库操作封装
+ * 绠＄悊鍛樻暟鎹簱鎿嶄綔灏佽
  */
 public class AdminDao extends BaseDao {
-	
+
 	public Admin login(String name ,String password){
 		String sql = "select * from s_admin where name = '" + name + "' and password = '" + password + "'";
 		ResultSet resultSet = query(sql);

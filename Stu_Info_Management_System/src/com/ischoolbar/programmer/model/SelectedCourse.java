@@ -1,8 +1,8 @@
 package com.ischoolbar.programmer.model;
 /**
- * 
+ *
  * @author llq
- *ѡ�α�ʵ��
+ *选课表实体
  */
 public class SelectedCourse {
 	private int id;
@@ -26,6 +26,6 @@ public class SelectedCourse {
 	public void setCourseId(int courseId) {
 		this.courseId = courseId;
 	}
-	
-	
+
+
 }

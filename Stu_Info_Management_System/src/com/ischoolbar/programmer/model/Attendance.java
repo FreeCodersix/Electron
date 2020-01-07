@@ -1,6 +1,6 @@
 package com.ischoolbar.programmer.model;
 /**
- * ¿¼ÇÚ±í
+ * è€ƒå‹¤è¡¨
  * @author llq
  *
  */

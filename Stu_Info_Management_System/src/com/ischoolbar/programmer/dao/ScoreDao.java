@@ -12,13 +12,13 @@ import com.ischoolbar.programmer.model.Score;
 import com.ischoolbar.programmer.model.SelectedCourse;
 
 /**
- * ³É¼¨±íÊı¾İ¿â»ù´¡²Ù×÷
+ * æˆç»©è¡¨æ•°æ®åº“åŸºç¡€æ“ä½œ
  * @author llq
  *
  */
 public class ScoreDao extends BaseDao {
 	/**
-	 * ³É¼¨Â¼Èë
+	 * æˆç»©å½•å…¥
 	 * @param score
 	 * @return
 	 */
@@ -26,9 +26,9 @@ public class ScoreDao extends BaseDao {
 		String sql = "insert into s_score values(null,"+score.getStudentId()+","+score.getCourseId()+","+score.getScore()+",'"+score.getRemark()+"')";
 		return update(sql);
 	}
-	
+
 	/**
-	 * ĞŞ¸Ä³É¼¨ĞÅÏ¢
+	 * ä¿®æ”¹æˆç»©ä¿¡æ¯
 	 * @param score
 	 * @return
 	 */
@@ -40,9 +40,9 @@ public class ScoreDao extends BaseDao {
 		sql += " where id = " + score.getId();
 		return update(sql);
 	}
-	
+
 	/**
-	 * ÅĞ¶Ï³É¼¨ÊÇ·ñÂ¼Èë
+	 * åˆ¤æ–­æˆç»©æ˜¯å¦å½•å…¥
 	 * @param studentId
 	 * @param courseId
 	 * @return
@@ -62,7 +62,7 @@ public class ScoreDao extends BaseDao {
 	}
 
 	/**
-	 * ·ÖÒ³»ñÈ¡³É¼¨ÁĞ±í
+	 * åˆ†é¡µè·å–æˆç»©åˆ—è¡¨
 	 * @param score
 	 * @param page
 	 * @return
@@ -98,7 +98,7 @@ public class ScoreDao extends BaseDao {
 	}
 
 	/**
-	 * »ñÈ¡·ûºÏÄ³Ò»Ìõ¼şµÄËùÓĞ³É¼¨ÁĞ±í
+	 * è·å–ç¬¦åˆæŸä¸€æ¡ä»¶çš„æ‰€æœ‰æˆç»©åˆ—è¡¨
 	 * @param score
 	 * @return
 	 */
@@ -131,9 +131,9 @@ public class ScoreDao extends BaseDao {
 		}
 		return ret;
 	}
-	
+
 	/**
-	 * »ñÈ¡³É¼¨×Ü¼ÇÂ¼Êı
+	 * è·å–æˆç»©æ€»è®°å½•æ•°
 	 * @param score
 	 * @return
 	 */
@@ -161,7 +161,7 @@ public class ScoreDao extends BaseDao {
 	}
 
 	/**
-	 * É¾³ı³É¼¨
+	 * åˆ é™¤æˆç»©
 	 * @param id
 	 * @return
 	 */
@@ -170,7 +170,7 @@ public class ScoreDao extends BaseDao {
 		String sql = "delete from s_score where id = " + id;
 		return update(sql);
 	}
-	
+
 	public Map<String, Object> getAvgStats(Score score){
 		Map<String,Object> ret = new HashMap<String, Object>();
 		String sql = "select max(s_score.score) as max_score,avg(s_score.score) as avg_score,min(s_score.score) as min_score,s_course.name as courseName from s_score,s_course where s_score.course_id=s_course.id and s_score.course_id = " + score.getCourseId();

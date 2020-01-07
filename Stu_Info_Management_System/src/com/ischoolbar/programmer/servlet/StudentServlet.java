@@ -20,9 +20,9 @@ import com.ischoolbar.programmer.model.Page;
 import com.ischoolbar.programmer.model.Student;
 import com.ischoolbar.programmer.util.SnGenerateUtil;
 /**
- * 
+ *
  * @author llq
- *Ñ§ÉúĞÅÏ¢¹ÜÀí¹¦ÄÜÊµÏÖservlet
+ *å­¦ç”Ÿä¿¡æ¯ç®¡ç†åŠŸèƒ½å®ç°servlet
  */
 public class StudentServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException{
@@ -43,7 +43,7 @@ public class StudentServlet extends HttpServlet {
 		}
 	}
 	private void deleteStudent(HttpServletRequest request,
-			HttpServletResponse response) {
+							   HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		String[] ids = request.getParameterValues("ids[]");
 		String idStr = "";
@@ -64,7 +64,7 @@ public class StudentServlet extends HttpServlet {
 		}
 	}
 	private void editStudent(HttpServletRequest request,
-			HttpServletResponse response) {
+							 HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		String name = request.getParameter("name");
 		int id = Integer.parseInt(request.getParameter("id"));
@@ -92,19 +92,19 @@ public class StudentServlet extends HttpServlet {
 		}
 	}
 	private void getStudentList(HttpServletRequest request,
-			HttpServletResponse response) {
+								HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		String name = request.getParameter("studentName");
 		Integer currentPage = request.getParameter("page") == null ? 1 : Integer.parseInt(request.getParameter("page"));
 		Integer pageSize = request.getParameter("rows") == null ? 999 : Integer.parseInt(request.getParameter("rows"));
 		Integer clazz = request.getParameter("clazzid") == null ? 0 : Integer.parseInt(request.getParameter("clazzid"));
-		//»ñÈ¡µ±Ç°µÇÂ¼ÓÃ»§ÀàĞÍ
+		//è·å–å½“å‰ç™»å½•ç”¨æˆ·ç±»å‹
 		int userType = Integer.parseInt(request.getSession().getAttribute("userType").toString());
 		Student student = new Student();
 		student.setName(name);
 		student.setClazzId(clazz);
 		if(userType == 2){
-			//Èç¹ûÊÇÑ§Éú£¬Ö»ÄÜ²é¿´×Ô¼ºµÄĞÅÏ¢
+			//å¦‚æœæ˜¯å­¦ç”Ÿï¼Œåªèƒ½æŸ¥çœ‹è‡ªå·±çš„ä¿¡æ¯
 			Student currentUser = (Student)request.getSession().getAttribute("user");
 			student.setId(currentUser.getId());
 		}
@@ -129,7 +129,7 @@ public class StudentServlet extends HttpServlet {
 		}
 	}
 	private void addStudent(HttpServletRequest request,
-			HttpServletResponse response) {
+							HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
@@ -158,7 +158,7 @@ public class StudentServlet extends HttpServlet {
 		}
 	}
 	private void studentList(HttpServletRequest request,
-			HttpServletResponse response) throws IOException {
+							 HttpServletResponse response) throws IOException {
 		// TODO Auto-generated method stub
 		try {
 			request.getRequestDispatcher("view/studentList.jsp").forward(request, response);

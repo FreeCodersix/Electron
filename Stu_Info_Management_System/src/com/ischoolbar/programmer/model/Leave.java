@@ -1,19 +1,19 @@
 package com.ischoolbar.programmer.model;
 /**
- * Çë¼Ù±íÊµÌåÀà
+ * è¯·å‡è¡¨å®ä½“ç±»
  * @author llq
  *
  */
 public class Leave {
 	
-	public static int LEAVE_STATUS_WAIT = 0;//µÈ´ıÉóºË
-	public static int LEAVE_STATUS_AGREE = 1;//Í¬Òâ
-	public static int LEAVE_STATUS_DISAGREE = -1;//²»Í¬Òâ
+	public static int LEAVE_STATUS_WAIT = 0;//ï¿½È´ï¿½ï¿½ï¿½ï¿½
+	public static int LEAVE_STATUS_AGREE = 1;//Í¬ï¿½ï¿½
+	public static int LEAVE_STATUS_DISAGREE = -1;//ï¿½ï¿½Í¬ï¿½ï¿½
 	private int id;
 	private int studentId;
-	private String info;//Çë¼ÙÀíÓÉ
-	private int status = LEAVE_STATUS_WAIT;//Çë¼ÙÌõ×´Ì¬
-	private String remark;//Åú¸´ÄÚÈİ
+	private String info;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	private int status = LEAVE_STATUS_WAIT;//ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+	private String remark;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public int getId() {
 		return id;
 	}

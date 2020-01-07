@@ -18,9 +18,9 @@ import com.ischoolbar.programmer.dao.ClazzDao;
 import com.ischoolbar.programmer.model.Clazz;
 import com.ischoolbar.programmer.model.Page;
 /**
- * 
+ *
  * @author llq
- *班级信息管理servlet
+ *鐝骇淇℃伅绠＄悊servlet
  */
 public class ClazzServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException{
@@ -41,10 +41,10 @@ public class ClazzServlet extends HttpServlet {
 		}
 	}
 	private void editClazz(HttpServletRequest request,
-			HttpServletResponse response) {
+						   HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		Integer id = Integer.parseInt(request.getParameter("id"));
-		String name = request.getParameter("name"); 
+		String name = request.getParameter("name");
 		String info = request.getParameter("info");
 		Clazz clazz = new Clazz();
 		clazz.setName(name);
@@ -63,7 +63,7 @@ public class ClazzServlet extends HttpServlet {
 		}
 	}
 	private void deleteClazz(HttpServletRequest request,
-			HttpServletResponse response) {
+							 HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		Integer id = Integer.parseInt(request.getParameter("clazzid"));
 		ClazzDao clazzDao = new ClazzDao();
@@ -79,9 +79,9 @@ public class ClazzServlet extends HttpServlet {
 		}
 	}
 	private void addClazz(HttpServletRequest request,
-			HttpServletResponse response) {
+						  HttpServletResponse response) {
 		// TODO Auto-generated method stub
-		String name = request.getParameter("name"); 
+		String name = request.getParameter("name");
 		String info = request.getParameter("info");
 		Clazz clazz = new Clazz();
 		clazz.setName(name);
@@ -97,10 +97,10 @@ public class ClazzServlet extends HttpServlet {
 				clazzDao.closeCon();
 			}
 		}
-		
+
 	}
 	private void clazzList(HttpServletRequest request,
-			HttpServletResponse response) {
+						   HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		try {
 			request.getRequestDispatcher("view/clazzList.jsp").forward(request, response);
