@@ -400,9 +400,10 @@
 	
 	<!-- 添加学生窗口 -->
 	<div id="addDialog" style="padding: 10px">  
-		<div style="float: right; margin: 20px 20px 0 0; width: 200px; border: 1px solid #EBF3FF" id="photo">
-	    	<img alt="照片" style="max-width: 200px; max-height: 400px;" title="照片" src="PhotoServlet?method=getPhoto" />
-	    </div> 
+		<div style="float: right; margin: 20px 20px 0 0; width: 200px; border: 0px solid #EBF3FF" id="photo">
+	    	<%--<img alt="照片" style="max-width: 200px; max-height: 400px;" title="照片" src="PhotoServlet?method=getPhoto" />--%>
+	    	<img alt="照片" style="max-width: 200px; max-height: 400px; border: 0px" title="照片" src="../h-ui/images/user.png" />
+	    </div>
     	<form id="addForm" method="post">
 	    	<table cellpadding="8" >
 	    		

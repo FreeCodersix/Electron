@@ -10,7 +10,7 @@
 
 <div title="欢迎使用" style="padding:20px;overflow:hidden; color:red; " >
 	<p style="font-size: 25px; line-height: 30px; height: 30px;">欢迎使用学生信息管理系统</p>
-  	<p>开发人员：Steven.Lu</p>
+  	<p>开发人员：鲁博文</p>
   	<p>开发周期：2019/10/10 --- 2020/04/30</p>
   	<hr />
   	<h2>系统环境</h2>
