@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Tomcat 8">
+    <CLASSES>
+      <root url="file://D:/Apache Software Foundation/Tomcat 8.5" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://D:/Apache Software Foundation/Tomcat 8.5/commons-fileupload-1.4-bin/apidocs" />
+      <root url="file://D:/Apache Software Foundation/Tomcat 8.5/commons-fileupload-1.4-bin/site/apidocs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://D:/Apache Software Foundation/Tomcat 8.5/webapps/docs/appdev/sample/src" />
+      <root url="file://D:/Apache Software Foundation/Tomcat 8.5/work/Catalina/localhost/ROOT" />
+    </SOURCES>
+  </library>
+</component>
